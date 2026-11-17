@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox & Grid Shared Layout — Program 13</title>
+    
+<link rel="stylesheet" href="Module3 P13.css">
+</head>
+<body class="page-grid">
+    <!-- 1. Flexbox used for 1D horizontal navbar alignment -->
+    <header class="navbar">
+        <h2>Sumedha Ghosh</h2>
+        <nav class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#showcase">Showcase</a>
+            <a href="#summary">Summary</a>
+        </nav>
+    </header>
+
+    <!-- 2. Sidebar placed in the 2D CSS Grid -->
+    <aside class="sidebar">
+        <h3>When to Use Which</h3>
+        <ul>
+            <li><strong>CSS Grid:</strong> Full page shells, sidebars, and 2D card galleries.</li>
+            <li><strong>Flexbox:</strong> Navbars, button groups, and single-row alignment.</li>
+        </ul>
+    </aside>
+
+    <!-- 3. Main Content Area -->
+    <main id="overview" class="main-content">
+        <section class="intro-box">
+            <h1>Shared Layout: Grid + Flexbox</h1>
+            <p>This page uses CSS Grid for the overall layout structure and Flexbox inside components for clean alignment.</p>
+        </section>
+
+        <!-- 2D Grid of Cards -->
+        <section id="showcase" class="card-grid">
+            <article class="card">
+                <div class="card-top">
+                    <h3>Outer Page Shell</h3>
+                    <span class="badge">CSS Grid</span>
+                </div>
+                <p>Defines the header, sidebar, main section, and footer areas across rows and columns.</p>
+                <div class="card-bottom">
+                    <span>2D Layout</span>
+                    <a href="#summary">Details</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-top">
+                    <h3>Navigation Bar</h3>
+                    <span class="badge">Flexbox</span>
+                </div>
+                <p>Aligns the brand title on the left and navigation links on the right in a single row.</p>
+                <div class="card-bottom">
+                    <span>1D Row</span>
+                    <a href="#summary">Details</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-top">
+                    <h3>Card Internals</h3>
+                    <span class="badge">Flexbox</span>
+                </div>
+                <p>Spaces the card title and badge apart while pinning the card footer to the bottom.</p>
+                <div class="card-bottom">
+                    <span>1D Column</span>
+                    <a href="#summary">Details</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- 4. Footer spanning the full bottom row of CSS Grid -->
+    <footer id="summary" class="site-footer">
+        <p>Program 13 — Choosing Between Flexbox and CSS Grid • Sumedha Ghosh</p>
+    </footer>
+</body>
+</html>

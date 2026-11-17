@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* =========================================
+   1. CSS GRID FOR 2D PAGE SHELL
+   ========================================= */
+.page-grid {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+/* =========================================
+   2. FLEXBOX FOR 1D NAVBAR ALIGNMENT
+   ========================================= */
+.navbar {
+    grid-area: header;
+    background-color: #1e293b;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Sidebar Area */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #ffffff;
+    padding: 24px;
+    border-right: 1px solid #cbd5e1;
+}
+
+.sidebar h3 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.sidebar ul {
+    padding-left: 18px;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* Main Content Area */
+.main-content {
+    grid-area: main;
+    padding: 28px;
+}
+
+.intro-box {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.intro-box h1 {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   3. CSS GRID FOR 2D CARD GALLERY
+   ========================================= */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* =========================================
+   4. FLEXBOX INSIDE EACH CARD (1D ALIGNMENT)
+   ========================================= */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.card-top, .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.card-bottom {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.card-bottom a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Area */
+.site-footer {
+    grid-area: footer;
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 16px;
+    font-size: 14px;
+}
+
+/* Responsive Mobile Collapse */
+@media (max-width: 768px) {
+    .page-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

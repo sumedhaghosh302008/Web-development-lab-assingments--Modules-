@@ -1,0 +1,63 @@
+:root {
+    --primary: #2563eb;
+    --secondary: #64748b;
+    --background: #f1f5f9;
+    --text: #1e293b;
+    --font-small: 14px;
+    --font-medium: 18px;
+    --font-large: 32px;
+    --space-small: 8px;
+    --space-medium: 16px;
+    --space-large: 32px;
+    --radius: 12px;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    font-size: var(--font-medium);
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: var(--space-large);
+}
+
+h1 {
+    font-size: var(--font-large);
+    font-weight: bold;
+}
+
+.card {
+    background: white;
+    padding: var(--space-large);
+    margin: var(--space-large);
+    border-radius: var(--radius);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+p {
+    font-size: var(--font-small);
+    line-height: 1.6;
+    color: var(--secondary);
+}
+
+/* button */
+button {
+    background: cornsilk;
+    color: var(--text);
+    padding: var(--space-small);
+    border: none;
+    border-radius: var(--radius);
+    font-size: var(--font-small);
+}

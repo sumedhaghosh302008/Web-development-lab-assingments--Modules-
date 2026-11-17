@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sticky-Bottom Page Layout via Vertical Flexbox */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 1. Three-Part Flexbox Header */
+.site-header {
+    background-color: #1e293b;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 20px;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.btn-hire {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 2. Hero Section Using Flexbox Alignment */
+.hero-section {
+    flex: 1;
+    max-width: 960px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 2 1 320px;
+}
+
+.hero-text h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.hero-text p {
+    color: #475569;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-badge {
+    flex: 1 1 220px;
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hero-badge h3 {
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+/* 3. Multi-Column Flexbox Footer */
+.site-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    padding: 32px 32px 16px;
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-col {
+    flex: 1 1 220px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 6px;
+}
+
+.footer-col a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: #38bdf8;
+}
+
+.footer-bottom {
+    border-top: 1px solid #334155;
+    padding-top: 14px;
+    text-align: center;
+    font-size: 14px;
+    color: #94a3b8;
+}

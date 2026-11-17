@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Chronicle — CSS Grid Newspaper Layout</title>
+    
+<link rel="stylesheet" href="Module3 P11.css">
+</head>
+<body>
+    <header class="masthead">
+        <h1>THE DAILY CHRONICLE</h1>
+        <p class="dateline">Bengaluru Edition • Sunday, November 15, 2026 • Vol. 11</p>
+    </header>
+
+    <main class="newspaper-grid">
+        <!-- Lead Story spanning 2 columns -->
+        <article class="lead-story">
+            <h2>CSS Grid Transforms Modern Web Page Layouts</h2>
+            <p class="byline">By Sumedha Ghosh | Technology Desk</p>
+            <p>Web developers now build complex two-dimensional magazine and newspaper layouts with minimal markup using CSS Grid. Unlike one-dimensional tools, Grid controls both rows and columns simultaneously.</p>
+            <p>With properties like grid-template-columns and grid-column span, lead articles naturally command attention across multiple columns while supporting stories stay neatly aligned.</p>
+        </article>
+
+        <!-- Sidebar Column -->
+        <aside class="sidebar">
+            <h3>Latest Briefs</h3>
+            <ul>
+                <li><strong>Campus Tech:</strong> First-year CSE students complete Module 3 web layout labs.</li>
+                <li><strong>Open Source:</strong> Hacktoberfest contributors wrap up documentation pull requests.</li>
+                <li><strong>Design Tip:</strong> Always pair serif headlines with readable line spacing for print-style pages.</li>
+            </ul>
+        </aside>
+
+        <!-- Bottom Row Articles -->
+        <article class="sub-story">
+            <h3>Flexbox vs. CSS Grid</h3>
+            <p>Use Flexbox for single-row navigation bars and headers, and choose CSS Grid for full multi-column page structures.</p>
+        </article>
+
+        <article class="sub-story">
+            <h3>Semantic HTML5 Matters</h3>
+            <p>Using article, aside, header, and main improves accessibility and keeps stylesheet rules clean and readable.</p>
+        </article>
+
+        <article class="sub-story">
+            <h3>Responsive Breakpoints</h3>
+            <p>Media queries collapse multi-column newspaper grids into a single readable column on mobile screens.</p>
+        </article>
+    </main>
+</body>
+</html>
